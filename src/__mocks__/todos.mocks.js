@@ -1,0 +1,1 @@
+export const mockTodo = {title: 'Get image', completed: false, id: 2 }

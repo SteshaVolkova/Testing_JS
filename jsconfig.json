@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "types": ["jest"],
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "checkJs": false
+  },
+  "include": ["**/*.js", "**/*.test.js", "**/*.spec.js"],
+  "exclude": ["node_modules"]
+}
