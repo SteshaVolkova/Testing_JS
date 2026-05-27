@@ -28,6 +28,7 @@ const config = {
     // Может пригодиться для тестирования стандартного браузерного API
     // !!! CHECK FOR THIS VERSION JEST !!!
     // setupFilesAfterEnv: ['<rootDir>/internal/jest/setup-tests.js'],
+    setupFilesAfterEnv: ['<rootDir>/internal/jest/custom-matchers.js'],
     // описание, какой процент покрытия тестами должен быть
     coverageThreshold: {
         global: {
