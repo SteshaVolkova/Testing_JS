@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`createUser should create a user firstName and lastName only 1`] = `
+{
+  "email": "",
+  "firstName": "John",
+  "lastName": "Doe",
+  "password": "password",
+  "phone": "",
+  "type": "USER",
+}
+`;
+
+exports[`createUser should create a user firstName, lastName and phone 1`] = `
+{
+  "email": "",
+  "firstName": "John",
+  "lastName": "Doe",
+  "password": "password",
+  "phone": "123-456-7890",
+  "type": "USER",
+}
+`;
+
+exports[`createUser should create a user firstName, lastName, phone and email 1`] = `
+{
+  "email": "john@doe.com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "password": "password",
+  "phone": "123-456-7890",
+  "type": "USER",
+}
+`;
