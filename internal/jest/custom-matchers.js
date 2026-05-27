@@ -1,5 +1,11 @@
 import {_expect_} from '@jest/globals';
+// здесь нам не нужно никакю устанавливать библиотеку,
+// у нас в node_modules уже есть эти папки,
+// мы просто расширяем expect кастомно
 
+// для работы данного мачера нужно в конфиге включить
+// setupFilesAfterEnv: ['<rootDir>/internal/jest/custom-matchers.js'],
+// иначе его просто не будет видно (он не будет читаться)
 function toBeWithinRange(actual, floor, ceiling) {
     if (
         typeof actual !== 'number' ||
