@@ -17,14 +17,17 @@ const config = {
     // что у нас есть window и какие-то возможности в нём,
     // но не все, например нет winfow.matchMedia и мы решим
     //  её добавить самостоятельно
-    testEnvironment: 'jsdom',
+    // !!! CHECK FOR THIS VERSION JEST !!!
+    // не поставляется по умолчанию, нужно ставить доп пакеты !!!
+    // testEnvironment: 'jsdom',
     // указываем setup файлы в массиве
     setupFiles: ['<rootDir>/internal/jest/jest.setup.js'],
     // когда у нас есть testEnvironment и 'jsdom' уже настроен,
     // прошу выполнить указанный файл
     // (таким образом мы добавляем в глобальную переменную window полифил и функцию resizeTo).
     // Может пригодиться для тестирования стандартного браузерного API
-    setupFilesAfterEnv: ['<rootDir>/internal/jest/setup-tests.js'],
+    // !!! CHECK FOR THIS VERSION JEST !!!
+    // setupFilesAfterEnv: ['<rootDir>/internal/jest/setup-tests.js'],
     // описание, какой процент покрытия тестами должен быть
     coverageThreshold: {
         global: {
@@ -33,7 +36,13 @@ const config = {
             lines: 80,
             statements: 80,
         },
-    }
+    },
+    // так же глобавльные переменные можно задавать
+    // рямво в конфиге и они будут доступны в любых
+    // файлах.
+    globals: {
+        _DEV_: true,
+    },
 };
 
 module.exports = config;

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // This will run before Jest is loaded
 // Setup files - это файл,который позволяет нам
 // подготовить что-то для дальнейшего запуска тестов
@@ -5,3 +7,4 @@
 // Есть ещё Teardown - что будет выполняться,
 // когда все тесты завершатся.
 global.myGlobalVariable = 'Hello world!';
+global.SECRET_TOKEN = process.env.SECRET_TOKEN;
