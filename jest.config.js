@@ -10,7 +10,7 @@ const config = {
         '!<rootDir>/src/**/*.mock.*'
     ],
     // описание файлов для unit тестов
-    testMatch: ['<rootDir>/src/**/*.spec.js'],
+    testMatch: ['<rootDir>/src/**/*.test.js'],
     // описание, какой процент покрытия тестами должен быть
     coverageThreshold: {
         global: {
